@@ -1,0 +1,8 @@
+<?php
+
+$hostname = 'localhost';
+$db_name = 'comments_app';
+$db_user = 'root';
+$db_pass = '';
+
+?>

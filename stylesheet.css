@@ -1,0 +1,72 @@
+.container {
+width: 730px;
+margin: auto;
+}
+
+.box-lg {
+padding: 48px 60px;
+text-align: center;
+margin-bottom: 30px;
+color: inherit;
+background-color: #EEE;
+border-radius: 6px;
+}
+
+
+/*** BUTTONS ***/
+
+.button {
+display: inline-block;
+line-height: 1.42857;
+text-align: center;
+vertical-align: middle;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+
+/* Sizes */
+
+.button-lg {
+padding: 10px 16px;
+font-size: 18px;
+line-height: 1.33;
+border-radius: 6px;
+}
+
+.button-blue {
+color: #FFF;
+background-color: #428BCA;
+border-color: #357EBD;
+}
+
+.box-lg>.button {
+padding: 14px 24px;
+font-size: 21px;
+}
+
+
+
+
+/* LOADING ANIMATION */
+
+.refresh-animate {
+    height: 20px;
+    -animation: spin 1.0s infinite linear;
+    -webkit-animation: spin2 1.0s infinite linear;
+    -moz-animation: spin3 1.0s infinite linear;
+}
+
+@-moz-keyframes spin3 {
+    from { -moz-transform: rotate(0deg);}
+    to { -moz-transform: rotate(360deg);}
+}
+    
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
