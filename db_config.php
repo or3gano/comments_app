@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 /// DATABASE INFORMATION ///
 $hostname = 'localhost';
@@ -22,6 +23,9 @@ $db_exists = mysqli_select_db($con,$db_name);
 
 // Redirect to create_db.php if it doesn't exist
 if (!$db_exists) {
+  $_SESSION['hostname']=$hostname;
+  $_SESSION['db_user']=$db_user;
+  $_SESSION['db_pass']=$db_pass;
   header('location: create_db.php');
 }
 

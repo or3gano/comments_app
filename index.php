@@ -1,1 +1,1 @@
-<?php include 'db_config.php' ?>
+<?php header('location: login.php') ?>
