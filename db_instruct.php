@@ -36,7 +36,8 @@
                 <li></li>
                 <li></li>
                 <li></li>
-                <li style="list-style-type: none;">You are still here? That means you aren't as lucky as you thought.</li>
+                <p>You are still here?</p>
+                <p>That means you aren't as lucky as you thought.</p>
             </ul>
             <li>Repeat the above steps with the <strong>CORRECT</strong> information until you aren't on this page anymore.</li>
         </ol>

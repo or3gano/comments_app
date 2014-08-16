@@ -1,17 +1,20 @@
 <html>
 <head>
 <link rel="stylesheet" href="stylesheet.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js.js"></script>
 </head>
 <body>
 <div class="container">
     <div class="box-lg" style="margin:100px 0;">
         <h1>The database isn't installed yet</h1>
         <h2>Sit tight while I install it for you ...</h2>
-        <button class="button button-blue"><img src="images/refresh.png" class="refresh-animate"/> Installing...</button>
+        <button id="installing" class="button button-blue"><img src="images/refresh.png" class="refresh-animate"/> Installing...</button>
+        <div id="db_created" class="success hidden">
+            <h2>Database was successfully created!</h2>
+        </div>
     </div>
 </div>
-</body>    
-</html>
 
 <?php
 session_start();
@@ -34,6 +37,14 @@ foreach( $queries as $stmt ) {
 mysqli_query($con, $stmt);
 }
 
-header( "refresh:3;url=login.php" );
+$db_exists = mysqli_select_db($con, 'comments_app');
+
+if( $db_exists ) {?>
+<script>dbLoaded()</script>
+<?php header( 'refresh:3;url=login.php' );
+}
+
 
 ?>
+</body>    
+</html>
