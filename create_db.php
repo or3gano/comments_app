@@ -6,10 +6,10 @@
 </head>
 <body>
 <div class="container">
-    <div class="box-lg" style="margin:100px 0;">
+    <div class="box_lg" style="margin:100px 0;">
         <h1>The database isn't installed yet</h1>
         <h2>Sit tight while I install it for you ...</h2>
-        <button id="installing" class="button button-blue"><img src="images/refresh.png" class="refresh-animate"/> Installing...</button>
+        <button id="installing" class="button button_blue"><img src="images/refresh.png" class="refresh_animate"/> Installing...</button>
         <div id="db_created" class="success hidden">
             <h2>Database was successfully created!</h2>
         </div>
