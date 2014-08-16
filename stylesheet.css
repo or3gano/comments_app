@@ -1,3 +1,16 @@
+/*** GENERAL STYLES ***/
+li {
+padding: 20px 0px;
+}
+
+a {
+color: #428BCA;
+text-decoration: none;
+}
+
+
+
+/*** BOXES AND CONTAINERS ***/
 .container {
 width: 730px;
 margin: auto;
@@ -11,6 +24,36 @@ color: inherit;
 background-color: #EEE;
 border-radius: 6px;
 }
+
+.blue_container {
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+margin-bottom: 20px;
+background-color: #FFF;
+border: 1px solid transparent;
+border-radius: 4px;
+border-color: #BCE8F1;
+}
+
+.container_hd {
+padding: 10px 15px;
+border-bottom: 1px solid transparent;
+border-top-left-radius: 3px;
+border-top-right-radius: 3px;
+}
+
+.container_body {
+padding: 15px;
+}
+
+.code_box {
+margin: -15px 22px 14px -15px;
+padding: 9px 14px;
+background-color: #F7F7F9;
+border: 1px solid #E1E1E8;
+border-radius: 4px;
+font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
 
 
 /*** BUTTONS ***/
@@ -46,8 +89,23 @@ font-size: 21px;
 
 
 
+/*** MESSAGES ***/
+.warning {
+background-image: linear-gradient(to bottom, #F2DEDE 0px, #E7C3C3 100%);
+background-repeat: repeat-x;
+border-color: #DCA7A7;
+color: #A94442;
+background-color: #F2DEDE;
+border-color: #EBCCD1;
+padding: 15px;
+margin-bottom: 20px;
+border: 1px solid transparent;
+border-radius: 4px;  
+}
 
-/* LOADING ANIMATION */
+
+
+/*** LOADING ANIMATION ***/
 
 .refresh-animate {
     height: 20px;
@@ -69,4 +127,11 @@ font-size: 21px;
 @keyframes spin {
     from { transform: scale(1) rotate(0deg);}
     to { transform: scale(1) rotate(360deg);}
+}
+.blue_container > .container_hd {
+background-image: linear-gradient(to bottom, #D9EDF7 0px, #C4E3F3 100%);
+background-repeat: repeat-x;
+color: #31708F;
+background-color: #D9EDF7;
+border-color: #BCE8F1;
 }

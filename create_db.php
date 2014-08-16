@@ -34,6 +34,6 @@ foreach( $queries as $stmt ) {
 mysqli_query($con, $stmt);
 }
 
-header( "refresh:2;url=login.php" );
+header( "refresh:3;url=login.php" );
 
 ?>

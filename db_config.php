@@ -3,16 +3,16 @@ session_start();
 
 /// DATABASE INFORMATION ///
 $hostname = 'localhost';
-$db_name = 'comments_app';
-$db_user = 'root';
-$db_pass = 'root';
+$db_user = 'yourmysqlusername';
+$db_pass = 'yourmysqlpassword';
 
+// You don't need to change the db_name if you run create_db.php
+$db_name = 'comments_app';
 
 
 /// CONNECT TO MYSQL ///
 $con = mysqli_connect($hostname, $db_user, $db_pass);
-if (mysqli_connect_errno()) {
-  //echo "Failed to connect to MySQL: " . mysqli_connect_error();
+if (!$con) {
   header('location: db_instruct.php');
 }
 
@@ -22,7 +22,7 @@ if (mysqli_connect_errno()) {
 $db_exists = mysqli_select_db($con,$db_name);
 
 // Redirect to create_db.php if it doesn't exist
-if (!$db_exists) {
+if (!$db_exists && $con) {
   $_SESSION['hostname']=$hostname;
   $_SESSION['db_user']=$db_user;
   $_SESSION['db_pass']=$db_pass;
