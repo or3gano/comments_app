@@ -4,7 +4,7 @@ session_start();
 /// DATABASE INFORMATION ///
 $hostname = 'localhost';
 $db_user = 'root';
-$db_pass = 'root';
+$db_pass = '';
 
 // You don't need to change the db_name if you run create_db.php
 $db_name = 'comments_app';

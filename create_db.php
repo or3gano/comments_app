@@ -39,9 +39,8 @@ mysqli_query($con, $stmt);
 
 $db_exists = mysqli_select_db($con, 'comments_app');
 
-if( $db_exists ) {?>
-<script>dbLoaded()</script>
-<?php header( 'refresh:3;url=login.php' );
+if( $db_exists ) {
+header( 'refresh:3;url=login.php' );
 }
 
 
