@@ -21,7 +21,8 @@ session_start();
     <li class="menu">
         <?php echo 'Logged in as: ' . $_SESSION['user'] ?>
         <ul>
-            <li id="menu_logout" class="menu"><a href="logout.php">Logout</a></li>
+            <hr style="margin: -1px 8px; width: 90%;">
+            <a href="logout.php" class="menu">Logout</a>
         </ul>
     </li>
 </ul>
@@ -62,7 +63,7 @@ session_start();
 </div>
     
 <div id="add_comment" class="hidden">
-    <div class="container" style="width: 800px;">
+    <div class="container">
         <div class="box_md" style="margin-top:100px;">
             <div class="box_hd">
                 <h1>Add Comment</h1>
